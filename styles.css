@@ -1,0 +1,16 @@
+form{
+    display: flex;
+    flex-direction: column;
+}
+input{
+    max-width: 200px;
+}
+#phone{
+    outline: 0;
+}
+#phone:valid{
+    border-color: green;
+}
+#phone:focus:invalid{
+    border-color: red;
+}
