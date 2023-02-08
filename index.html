@@ -8,7 +8,7 @@
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <form action="">
+    <form action="" id="form">
         <label for="name" >Name: </label>
         <input type="text" id="name" name="name" placeholder="Nelson">
 
@@ -25,13 +25,13 @@
         <input type="password" id="password_confirmation" name="password_confirmation">
 
         <label for="phone">Phone</label>
-        <input type="tel" id="phone" required pattern="[0-9]{4}-[0-9]{4}" placeholder="226014129">
+        <input type="tel" id="phone"   placeholder="226014129">
 
         <label for="age">Age</label>
         <input type="number" id="age" name="age" placeholder="25">
 
         <label for="url">Personal website</label>
-        <input type="url" id="url" name="url" placeholder="https//:www.mywebsite.online">
+        <input type="url" id="url" name="url" placeholder="www.mywebsite.online">
 
         <select name="experience" id="experience" >
             <option value="junior">Junior</option>
@@ -62,9 +62,10 @@
 
 
 
-
+        <br>    
         <input type="submit" value="send">
 
     </form>
+    <script src="validation.js"></script>
 </body>
 </html>
