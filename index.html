@@ -1,76 +1,88 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Konami</title>
-    <link rel="stylesheet" href="styles.css">
-</head>
-<body>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
     <form action="" id="form">
-        <label for="name" >Name: </label>
-        <input type="text" id="name" name="name" placeholder="Nelson">
+      <label for="userName">Name: </label>
+      <input type="text" id="userName" name="userName" placeholder="Nelson" />
 
-        <label for="lastName">Last name: </label>
-        <input type="text" id="lastName" name="lastName" placeholder="Mandela">
+      <label for="lastName">Last name: </label>
+      <input type="text" id="lastName" name="lastName" placeholder="Mandela" />
 
-        <label for="email">Email</label>
-        <input type="email" name="email" id="email">
+      <label for="email">Email</label>
+      <input type="email" name="email" id="email" />
 
-        <label for="password">Password: </label>
-        <input type="password" id="password" name="password">
+      <label for="password">Password: </label>
+      <input type="password" id="password" name="password" />
 
-        <label for="password_confirmation">Password confirmation: </label>
-        <input type="password" id="password_confirmation" name="password_confirmation">
+      <label for="password_confirmation">Password confirmation: </label>
+      <input
+        type="password"
+        id="password_confirmation"
+        name="password_confirmation"
+      />
 
-        <label for="phone">Phone</label>
-        <input type="tel" id="phone"   placeholder="226014129">
+      <label for="phone">Phone</label>
+      <input type="tel" id="phone" placeholder="226014129" />
 
-        <label for="age">Age</label>
-        <input type="number" id="age" name="age" placeholder="25">
+      <label for="age">Age</label>
+      <input type="number" id="age" name="age" placeholder="25" />
 
-        <label for="url">Personal website</label>
-        <input type="url" id="url" name="url" placeholder="www.mywebsite.online">
+      <label for="url">Personal website</label>
+      <input
+        type="url"
+        id="url"
+        name="url"
+        placeholder="www.mywebsite.online"
+      />
 
-        <select name="experience" id="experience" >
-            <option value="junior">Junior</option>
-            <option value="mid_level" selected>Mid Level</option>
-            <option value="Senior">Senior</option>
-        </select>
+      <select name="experience" id="experience">
+        <option value="junior">Junior</option>
+        <option value="mid_level" selected>Mid Level</option>
+        <option value="Senior">Senior</option>
+      </select>
 
-        <label for="salary">Expected salary</label>
-        <input type="range" id="salary" name="salary" min="600" max="2500">
+      <label for="salary">Expected salary</label>
+      <input type="range" id="salary" name="salary" min="600" max="2500" />
 
-            <span>What kind of device do you use?</span>
-            <label for="desktop">
-                <input type="checkbox" id="desktop" name="desktop" value="desktop">Desktop PC
-            </label>
+      <span>What kind of device do you use?</span>
+      <label for="desktop">
+        <input
+          type="checkbox"
+          id="desktop"
+          name="desktop"
+          value="desktop"
+        />Desktop PC
+      </label>
 
-            <label for="laptop">
-                <input type="checkbox" id="laptop" name="laptop" value="laptop">Laptop
-            </label>
+      <label for="laptop">
+        <input type="checkbox" id="laptop" name="laptop" value="laptop" />Laptop
+      </label>
 
-            <label for="tablet">
-                <input type="checkbox" id="tablet" name="tablet" value="tablet">Tablet
-            </label>
+      <label for="tablet">
+        <input type="checkbox" id="tablet" name="tablet" value="tablet" />Tablet
+      </label>
 
-            <label for="smartphone">
-                <input type="checkbox" id="smartphone" name="smartphone" value="smartphone">Smartphone
-            </label>
-      
+      <label for="smartphone">
+        <input
+          type="checkbox"
+          id="smartphone"
+          name="smartphone"
+          value="smartphone"
+        />Smartphone
+      </label>
 
-
-
-        <br>    
-        <input type="submit" value="send">
-        <ul id="errors_list" class="errors_list">
-
-        </ul>
-
+      <br />
+      <input type="submit" value="send" />
+      <ul id="errors_list" class="errors_list"></ul>
     </form>
+    <script src="app.js"></script>
     <script src="errors_display.js"></script>
-    <script src="validation.js"></script>
-  
-</body>
+  </body>
 </html>
