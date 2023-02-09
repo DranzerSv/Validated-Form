@@ -1,0 +1,136 @@
+@media (min-width: 768px) {
+  body {
+    background-color: rgb(94, 70, 70);
+  }
+  .errors__list {
+    overflow: hidden;
+    box-sizing: border-box;
+    width: 85vw;
+    margin-left: 7.5vw;
+    padding-left: 5.5%;
+    background-color: #ffe7e7;
+    list-style: none;
+    font-family: 'Changa';
+    display: flexbox;
+    flex-direction: column;
+    border-radius: 2.5%;
+  }
+  .errors__list li {
+    color: #ef4243;
+    margin-top: 5px;
+    margin-bottom: 5px;
+  }
+  label {
+    margin-left: 5vw;
+    color: #94cc79;
+    font-family: 'Changa';
+  }
+  form {
+    background-color: black;
+    width: 100%;
+    display: grid;
+    grid-template-columns: 10% 40% 10% 40%;
+    justify-content: space-evenly;
+    padding-top: 25px;
+  }
+  .form__input {
+    display: inline;
+    background-color: black;
+    border: 2px solid gray;
+    border-radius: 5%;
+    margin-bottom: 5px;
+    width: 150px;
+    height: 30px;
+    color: white;
+    font-family: 'Changa';
+  }
+  .form__input::placeholder {
+    color: gray;
+    font-family: 'Changa';
+  }
+  .password {
+    color: white;
+  }
+  .form__selection {
+    background-color: #ffe7e7;
+    display: flex;
+    flex-direction: column;
+    grid-column: 1/3;
+    width: 300px;
+  }
+  .select__input {
+    background-color: black;
+    margin-left: 8vw;
+    margin-bottom: 5px;
+    width: 150px;
+    height: 30px;
+    background-color: black;
+    color: white;
+    font-family: 'Changa';
+  }
+  input[type='checkbox'] {
+    margin-left: 4vw;
+    margin-right: 12px;
+  }
+  /*---------------------RANGE INPUT-------------------------------*/
+  *,
+  *::after,
+  *::before {
+    box-sizing: border-box;
+  }
+  .form__salary-container {
+    width: 400px;
+    display: flex;
+    flex-direction: column;
+    padding-right: 190px;
+    justify-content: center;
+    align-items: center;
+    background-color: bisque;
+    grid-column: 3/4;
+  }
+  .form__salary-label {
+    background-color: aquamarine;
+    margin-top: 20px;
+  }
+  .form__range-container {
+    background-color: #ef4243;
+    width: 200px;
+    display: flex;
+    flex-direction: column;
+    justify-content: baseline;
+  }
+  .form__range {
+    margin-top: 20px;
+    width: 200px;
+    position: relative;
+  }
+
+  .form__range::before,
+  .form__range::after {
+    position: absolute;
+    display: inline-block;
+  }
+  .form__range::before {
+    content: attr(min);
+    left: 0;
+    color: #94cc79;
+    transform: translateX(calc(-100% - 5px));
+  }
+  .form__range::after {
+    content: attr(max);
+    right: 0;
+    color: #94cc79;
+    transform: translateX(calc(100% + 5px));
+  }
+  .form__output {
+    background-color: brown;
+    color: #94cc79;
+  }
+  .form__submit {
+    width: 220px;
+    color: #94cc79;
+    background-color: black;
+    font-family: 'Changa';
+    border: 2px solid gray;
+  }
+}

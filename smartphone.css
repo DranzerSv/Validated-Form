@@ -1,0 +1,126 @@
+body {
+  background-color: black;
+}
+.errors__list {
+  overflow: hidden;
+  box-sizing: border-box;
+  width: 85vw;
+  margin-left: 7.5vw;
+  padding-left: 5.5%;
+  background-color: #ffe7e7;
+  list-style: none;
+  font-family: 'Changa';
+  display: flexbox;
+  flex-direction: column;
+  border-radius: 2.5%;
+}
+.errors__list li {
+  color: #ef4243;
+  margin-top: 5px;
+  margin-bottom: 5px;
+}
+label {
+  margin-left: 5vw;
+  color: #94cc79;
+  font-family: 'Changa';
+}
+
+.form__input {
+  background-color: black;
+  border: 2px solid gray;
+  border-radius: 5%;
+  margin-left: 8vw;
+  margin-bottom: 5px;
+  width: 84vw;
+  height: 30px;
+  color: white;
+  font-family: 'Changa';
+}
+.form__input::placeholder {
+  color: gray;
+  font-family: 'Changa';
+}
+.password {
+  color: white;
+}
+
+.select__input {
+  margin-left: 8vw;
+  margin-bottom: 5px;
+  width: 84vw;
+  background-color: black;
+  color: white;
+  font-family: 'Changa';
+}
+input[type='checkbox'] {
+  margin-left: 4vw;
+  margin-right: 12px;
+}
+.form__selection {
+  display: flex;
+  flex-direction: column;
+}
+/*---------------------RANGE INPUT-------------------------------*/
+*,
+*::after,
+*::before {
+  box-sizing: border-box;
+}
+.form__salary-label {
+  margin-top: 20px;
+  margin-left: 35vw;
+}
+.form__range {
+  margin-top: 20px;
+  margin-left: 25vw;
+  width: 50vw;
+  position: relative;
+}
+
+.form__range::before,
+.form__range::after {
+  position: absolute;
+  display: inline-block;
+}
+.form__range::before {
+  content: attr(min);
+  left: 0;
+  color: #94cc79;
+  transform: translateX(calc(-100% - 5px));
+}
+.form__range::after {
+  content: attr(max);
+  right: 0;
+  color: #94cc79;
+  transform: translateX(calc(100% + 5px));
+}
+.form__output {
+  margin-top: 20px;
+  margin-left: 45vw;
+  width: 10vw;
+  color: #94cc79;
+}
+.form__submit {
+  margin-left: 7vw;
+  width: 86vw;
+  color: #94cc79;
+  background-color: black;
+  font-family: 'Changa';
+  border: 2px solid gray;
+}
+form {
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  padding-top: 25px;
+}
+/*
+#phone {
+  outline: 0;
+}
+#phone:valid {
+  border-color: green;
+}
+#phone:focus:invalid {
+  border-color: red;
+}*/
