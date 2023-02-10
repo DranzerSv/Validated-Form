@@ -1,3 +1,13 @@
+.rick__roll-gif {
+  display: none;
+  position: absolute;
+  top: 200px;
+  width: 60vw;
+  left: 20vw;
+}
+.showing__gif {
+  display: block;
+}
 @media (min-width: 1024px) {
   body {
     background-color: black;
@@ -115,6 +125,10 @@
     background-color: black;
     font-family: 'Changa';
     border: 2px solid gray;
+  }
+  .form__submit:hover {
+    background-color: white;
+    color: black;
   }
   form {
     width: 400px;

@@ -2,14 +2,14 @@
   .errors__list {
     overflow: hidden;
     box-sizing: border-box;
-    width: 85vw;
-    margin-left: 7.5vw;
-    padding-left: 5.5%;
+    width: 40vw;
+    margin-left: 30vw;
     background-color: #ffe7e7;
     list-style: none;
     font-family: 'Changa';
     display: flexbox;
     flex-direction: column;
+    padding-left: 35px;
     border-radius: 2.5%;
   }
   .errors__list li {
@@ -18,7 +18,7 @@
     margin-bottom: 5px;
   }
   label {
-    margin-left: 5vw;
+    margin-left: 15px;
     color: #94cc79;
     font-family: 'Changa';
   }

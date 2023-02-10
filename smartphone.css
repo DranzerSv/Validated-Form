@@ -20,6 +20,7 @@ body {
   margin-bottom: 5px;
 }
 label {
+  margin-bottom: 20px;
   margin-left: 5vw;
   color: #94cc79;
   font-family: 'Changa';
@@ -37,6 +38,7 @@ label {
   color: white;
   font-family: 'Changa';
 }
+
 .form__input::placeholder {
   color: gray;
   font-family: 'Changa';
@@ -108,12 +110,15 @@ input[type='checkbox'] {
 }
 .form__submit {
   margin: 55px;
+  padding-top: 10px;
+  padding-bottom: 10px;
   width: 250px;
   color: #94cc79;
   background-color: black;
   font-family: 'Changa';
   border: 2px solid gray;
 }
+
 form {
   overflow: hidden;
   display: flex;
