@@ -42,7 +42,7 @@ function validate(e) {
   /*-----------------------------------PASSWORD_confirmation --------------------------------------*/
 
   if (!password_confirmation.value) {
-    errors.push('Password confirmation can not be empty');
+    errors.push('Password confirmation is empty');
   } else if (password_confirmation.value != password.value) {
     errors.push('Password confirmation does not match');
   }
