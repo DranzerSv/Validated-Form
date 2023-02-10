@@ -59,7 +59,9 @@ function validate(e) {
     errors.push('age can not be empty');
     /*one upper, one lower, one selected special character,1 digit,8 character minimun*/
   } else if (!(parseInt(age.value) < 120)) {
-    errors.push('age must be numerical and smaller than 120 years');
+    errors.push(
+      'age must be numerical,bigger than 18 and smaller than 120 years'
+    );
   }
   /*-----------------------------------URL-------------------------------------*/
   verify(
