@@ -1,5 +1,15 @@
+.laser__cat-gif {
+  display: none;
+  position: absolute;
+  top: 200px;
+  width: 60vw;
+  left: 20vw;
+}
+.showing__gif {
+  display: block;
+}
 body {
-  background-color: black;
+  background-color: white;
 }
 .errors__list {
   overflow: hidden;
@@ -19,23 +29,33 @@ body {
   margin-top: 5px;
   margin-bottom: 5px;
 }
+form {
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding-top: 25px;
+  background-color: white;
+}
 label {
   margin-bottom: 20px;
   margin-left: 5vw;
-  color: #94cc79;
+  color: #9749e3;
   font-family: 'Changa';
 }
 
 .form__input {
-  background-color: black;
+  outline: none;
+  background-color: white;
   border: transparent;
-  border-bottom: 1px solid #eee;
+  border-bottom: 1px solid #bc90e8;
   margin-left: 8vw;
-  margin-bottom: 5px;
+  margin-bottom: 35px;
   width: 84%;
   max-width: 300px;
   height: 30px;
-  color: white;
+  color: black;
   font-family: 'Changa';
 }
 
@@ -44,18 +64,20 @@ label {
   font-family: 'Changa';
 }
 .password {
-  color: white;
+  color: black;
 }
 
 .select__input {
   margin-left: 8vw;
-  margin-bottom: 5px;
-  width: 300px;
-  background-color: black;
-  color: white;
+  margin-bottom: 35px;
+  width: 84%;
+  max-width: 250px;
+  background-color: white;
+  color: black;
   font-family: 'Changa';
 }
 input[type='checkbox'] {
+  accent-color: #9749e3;
   margin-left: 4vw;
   margin-right: 12px;
 }
@@ -70,6 +92,8 @@ input[type='checkbox'] {
   box-sizing: border-box;
 }
 .form__salary-label {
+  width: 200px;
+  margin-left: 100px;
   margin-top: 20px;
   overflow: hidden;
 }
@@ -78,7 +102,7 @@ input[type='checkbox'] {
   flex-direction: column;
   align-items: center;
   width: 200px;
-  margin-left: 70px;
+  margin-bottom: 50px;
 }
 .form__range {
   margin-top: 20px;
@@ -94,37 +118,32 @@ input[type='checkbox'] {
 .form__range::before {
   content: attr(min);
   left: 0;
-  color: #94cc79;
+  color: #9749e3;
   transform: translateX(calc(-100% - 5px));
 }
 .form__range::after {
   content: attr(max);
   right: 0;
-  color: #94cc79;
+  color: #9749e3;
   transform: translateX(calc(100% + 5px));
 }
 .form__output {
   margin-top: 20px;
-  width: 10vw;
-  color: #94cc79;
+  margin-left: 100px;
+  margin-right: 100px;
+  color: #9749e3;
 }
 .form__submit {
-  margin: 55px;
+  margin-left: 8vw;
   padding-top: 10px;
   padding-bottom: 10px;
   width: 250px;
-  color: #94cc79;
-  background-color: black;
+  color: white;
+  background-color: #9749e3;
   font-family: 'Changa';
   border: 2px solid gray;
 }
 
-form {
-  overflow: hidden;
-  display: flex;
-  flex-direction: column;
-  padding-top: 25px;
-}
 /*
 #phone {
   outline: 0;

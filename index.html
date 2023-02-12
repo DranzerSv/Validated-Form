@@ -11,10 +11,14 @@
     <link rel="stylesheet" href="./styles/normalize.css" />
     <link rel="stylesheet" href="./styles/smartphone.css" />
     <link rel="stylesheet" href="./styles/tablet.css" />
-    <link rel="stylesheet" href="./styles/desktop.css" />
   </head>
   <body>
-    <form action="" id="form" oninput="val.value = parseInt(salary.value)">
+    <form
+      action=""
+      id="form"
+      oninput="val.value = parseInt(salary.value)"
+      novalidate
+    >
       <label for="userName">Name: </label>
       <input
         type="text"
@@ -31,11 +35,12 @@
         name="lastName"
         placeholder="Mandela"
         class="form__input"
+        novalidate
       />
 
       <label for="email">Email</label>
       <input
-        type="text"
+        type="email"
         name="email"
         id="email"
         class="form__input"
@@ -60,7 +65,7 @@
 
       <label for="phone">Phone</label>
       <input
-        type="text"
+        type="phone"
         id="phone"
         placeholder="226014129"
         class="form__input"
@@ -69,7 +74,7 @@
 
       <label for="age">Age</label>
       <input
-        type="text"
+        type="number"
         id="age"
         name="age"
         placeholder="25"
@@ -78,7 +83,7 @@
 
       <label for="url">Personal website</label>
       <input
-        type="text"
+        type="url"
         id="url"
         name="url"
         placeholder="www.mywebsite.online"
@@ -149,10 +154,10 @@
       <input type="submit" value="SEND" class="form__submit" />
     </form>
     <img
-      src="rickroll-roll.gif"
-      alt="rick-roll-gif"
-      class="rick__roll-gif"
-      id="rick__roll-gif"
+      src="laser_cat.gif"
+      alt="laser_cat-gif"
+      class="laser__cat-gif"
+      id="laser_cat-gif"
     />
     <!--THE SQUARE WITH ALL USER WRONG INPUTS----------------->
     <ul id="errors_list" class="errors__list"></ul>

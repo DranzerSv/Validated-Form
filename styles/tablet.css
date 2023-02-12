@@ -19,12 +19,15 @@
   }
   label {
     margin-left: 15px;
-    color: #94cc79;
+    color: #9749e3;
     font-family: 'Changa';
   }
   form {
-    background-color: black;
-    width: 100%;
+    box-shadow: 1px 1px 14px rgb(221, 216, 216);
+    background-color: white;
+    margin-top: 20px;
+    margin-left: 5%;
+    width: 90%;
     display: grid;
     grid-template-columns: 10% 40% 10% 40%;
     justify-content: space-evenly;
@@ -32,23 +35,23 @@
   }
   .form__input {
     display: inline;
-    background-color: black;
+    background-color: white;
     outline: none;
     border: transparent;
-    border-bottom: 1px solid #eee;
+    border-bottom: 1px solid #bc90e8;
 
-    margin-bottom: 5px;
+    margin-bottom: 35px;
     width: 200px;
     height: 30px;
-    color: white;
+    color: black;
     font-family: 'Changa';
   }
   .form__input::placeholder {
-    color: gray;
+    color: rgb(207, 202, 202);
     font-family: 'Changa';
   }
   .password {
-    color: white;
+    color: black;
   }
   .form__selection {
     display: flex;
@@ -57,13 +60,12 @@
     width: 300px;
   }
   .select__input {
-    background-color: black;
+    background-color: white;
     margin-left: 8vw;
     margin-bottom: 5px;
     width: 150px;
     height: 30px;
-    background-color: black;
-    color: white;
+    color: #9749e3;
     font-family: 'Changa';
   }
   input[type='checkbox'] {
@@ -104,26 +106,28 @@
   .form__range::before {
     content: attr(min);
     left: 0;
-    color: #94cc79;
+    color: #9749e3;
     transform: translateX(calc(-100% - 5px));
   }
   .form__range::after {
     content: attr(max);
     right: 0;
-    color: #94cc79;
+    color: #9749e3;
     transform: translateX(calc(100% + 5px));
   }
   .form__output {
+    margin-left: 100px;
     margin-right: 100px;
-    color: #94cc79;
+    color: #9749e3;
   }
   .form__submit {
-    margin-top: 50px;
+    margin-bottom: 30px;
     margin-left: 30vw;
     width: 40vw;
+    max-width: 300px;
     height: 40px;
-    color: #94cc79;
-    background-color: black;
+    color: white;
+    background-color: #9749e3;
     font-family: 'Changa';
 
     border: 2px solid gray;
