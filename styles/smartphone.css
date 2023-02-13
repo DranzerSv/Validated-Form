@@ -11,24 +11,7 @@
 body {
   background-color: white;
 }
-.errors__list {
-  overflow: hidden;
-  box-sizing: border-box;
-  width: 85vw;
-  margin-left: 7.5vw;
-  padding-left: 5.5%;
-  background-color: #ffe7e7;
-  list-style: none;
-  font-family: 'Changa';
-  display: flexbox;
-  flex-direction: column;
-  border-radius: 2.5%;
-}
-.errors__list li {
-  color: #ef4243;
-  margin-top: 5px;
-  margin-bottom: 5px;
-}
+
 form {
   overflow: hidden;
   display: flex;
@@ -39,8 +22,6 @@ form {
   background-color: white;
 }
 label {
-  margin-bottom: 20px;
-  margin-left: 5vw;
   color: #9749e3;
   font-family: 'Changa';
 }
@@ -50,9 +31,7 @@ label {
   background-color: white;
   border: transparent;
   border-bottom: 1px solid #bc90e8;
-  margin-left: 8vw;
-  margin-bottom: 35px;
-  width: 84%;
+  width: 100%;
   max-width: 300px;
   height: 30px;
   color: black;
@@ -62,6 +41,18 @@ label {
 .form__input::placeholder {
   color: gray;
   font-family: 'Changa';
+}
+.input__container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 84%;
+  margin-bottom: 15px;
+}
+.error__message {
+  background-color: #ffe7e7;
+  width: 200px;
+  margin: 0px;
 }
 .password {
   color: black;

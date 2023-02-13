@@ -9,6 +9,5 @@ window.addEventListener('keyup', (e) => {
 
   if (keys.join('') === secretCode) {
     gif.classList.toggle('showing__gif');
-    console.log('activated');
   }
 });

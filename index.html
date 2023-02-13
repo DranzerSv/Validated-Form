@@ -20,82 +20,101 @@
       novalidate
     >
       <label for="userName">Name: </label>
-      <input
-        type="text"
-        id="userName"
-        name="userName"
-        placeholder="Nelson"
-        class="form__input"
-      />
-
+      <div class="input__container">
+        <input
+          type="text"
+          id="userName"
+          name="userName"
+          placeholder="Nelson"
+          class="form__input"
+        />
+        <p class="error__message" id="errorName"></p>
+      </div>
       <label for="lastName">Last name: </label>
-      <input
-        type="text"
-        id="lastName"
-        name="lastName"
-        placeholder="Mandela"
-        class="form__input"
-        novalidate
-      />
-
+      <div class="input__container">
+        <input
+          type="text"
+          id="lastName"
+          name="lastName"
+          placeholder="Mandela"
+          class="form__input"
+          novalidate
+        />
+        <p class="error__message" id="errorLastName"></p>
+      </div>
       <label for="email">Email</label>
-      <input
-        type="email"
-        name="email"
-        id="email"
-        class="form__input"
-        placeholder="example@example.com"
-      />
-
-      <label for="password">Password: </label>
-      <input
-        type="password"
-        id="password"
-        name="password"
-        class="form__input password"
-      />
-
-      <label for="password_confirmation">Password confirmation: </label>
-      <input
-        type="password"
-        id="password_confirmation"
-        name="password_confirmation"
-        class="form__input password"
-      />
-
+      <div class="input__container">
+        <input
+          type="email"
+          name="email"
+          id="email"
+          class="form__input"
+          placeholder="example@example.com"
+        />
+        <p class="error__message" id="errorEmail"></p>
+      </div>
       <label for="phone">Phone</label>
-      <input
-        type="phone"
-        id="phone"
-        placeholder="226014129"
-        class="form__input"
-        max="8"
-      />
+      <div class="input__container">
+        <input
+          type="phone"
+          id="phone"
+          placeholder="226014129"
+          class="form__input"
+          max="8"
+        />
+        <p class="error__message" id="errorPhone"></p>
+      </div>
+      <label for="password">Password: </label>
+      <div class="input__container">
+        <input
+          type="password"
+          id="password"
+          name="password"
+          class="form__input password"
+        />
+        <p class="error__message" id="errorPassword"></p>
+      </div>
+      <label for="password_confirmation">Password confirmation: </label>
+      <div class="input__container">
+        <input
+          type="password"
+          id="password_confirmation"
+          name="password_confirmation"
+          class="form__input password"
+        />
+        <p class="error__message" id="errorPasswordConfirmation"></p>
+      </div>
 
       <label for="age">Age</label>
-      <input
-        type="number"
-        id="age"
-        name="age"
-        placeholder="25"
-        class="form__input"
-      />
-
+      <div class="input__container">
+        <input
+          type="number"
+          id="age"
+          name="age"
+          placeholder="25"
+          class="form__input"
+        />
+        <p class="error__message" id="errorAge"></p>
+      </div>
       <label for="url">Personal website</label>
-      <input
-        type="url"
-        id="url"
-        name="url"
-        placeholder="www.mywebsite.online"
-        class="form__input"
-      />
+      <div class="input__container">
+        <input
+          type="url"
+          id="url"
+          name="url"
+          placeholder="www.mywebsite.online"
+          class="form__input"
+        />
+        <p class="error__message" id="errorUrl"></p>
+      </div>
+
       <label for="experience">Level of experience</label>
       <select name="experience" id="experience" class="select__input">
         <option value="junior">Junior</option>
         <option value="mid_level" selected>Mid Level</option>
         <option value="Senior">Senior</option>
       </select>
-
+      <section class="optional__inputs"></section>
       <div class="form__selection">
         <label for="desktop">
           <p>What kind of device do you use?</p>
@@ -151,6 +170,7 @@
       </div>
 
       <br />
+      <ul id="errors_list" class="errors__list"></ul>
       <input type="submit" value="SEND" class="form__submit" />
     </form>
     <img
@@ -160,10 +180,8 @@
       id="laser_cat-gif"
     />
     <!--THE SQUARE WITH ALL USER WRONG INPUTS----------------->
-    <ul id="errors_list" class="errors__list"></ul>
 
     <script type="module" src="./js/app.js"></script>
-    <script src="./js/errors_display.js"></script>
     <script src="./js/konamiCode.js"></script>
   </body>
 </html>

@@ -1,17 +1,22 @@
 import {} from './domElements.js'; /*poner variables */
 function validate(e) {
-  let errors = [];
+  let validated = true;
 
   e.preventDefault();
 
-  function verify(fieldValue, fieldName, regex, errormessage) {
-    if (!fieldValue) {
-      errors.push(`${fieldName} can't be empty`);
-      return;
+  function verify(fieldValue, fieldName, regex, errormessage, id) {
+    let parragraph = document.getElementById(id);
+    if (parragraph.firstChild) {
+      parragraph.removeChild(parragraph.lastChild);
     }
-    if (!regex.test(fieldValue)) {
-      errors.push(errormessage);
-      return;
+    if (!fieldValue) {
+      validated = false;
+      let text = document.createTextNode(`${fieldName} can't be empty`);
+      parragraph.appendChild(text);
+    } else if (!regex.test(fieldValue)) {
+      validated = false;
+      let text = document.createTextNode(errormessage);
+      parragraph.appendChild(text);
     }
   }
 
@@ -19,59 +24,60 @@ function validate(e) {
     userName.value,
     'Name',
     /^[a-zA-Z]+$/,
-    'Name can only contain characters'
+    'Name can only contain characters',
+    'errorName'
   );
   verify(
     lastName.value,
     'Last name',
     /^[a-zA-Z]+$/,
-    'Last name can only contain characters'
+    'Last name can only contain characters',
+    'errorLastName'
   );
   verify(
     email.value,
     'Email',
     /^[a-zA-Z0-9_.+-]+@[a-zA-Z0-9-]+\.[a-zA-Z0-9-.]+$/,
-    'Email must have a valid format'
+    'Email must have a valid format',
+    'errorEmail'
   );
   verify(
     password.value,
     'Password',
     /^(?=.*\d)(?=.*[@#$%^&+=_])(?=.*[a-z])(?=.*[A-Z]).{8,}$/,
-    'Password must include a lowercase, an uppercase,a digit, a special character(@#$%^&+=_) and a minumun of 8 characters'
-  );
-  /*-----------------------------------PASSWORD_confirmation --------------------------------------*/
-
-  if (!password_confirmation.value) {
-    errors.push('Password confirmation is empty');
-  } else if (password_confirmation.value != password.value) {
-    errors.push('Password confirmation does not match');
-  }
-  verify(
-    phone.value,
-    'Phone',
-    /^\d\d\d\d\d\d\d\d$/,
-    'Phone must have exactly 8 digits'
+    'Password must include a lowercase, an uppercase,a digit, a special character(@#$%^&+=_) and a minumun of 8 characters',
+    'errorPassword'
   );
 
-  /*-----------------------------------AGE --------------------------------------*/
-
-  if (age.value === '') {
-    errors.push('age can not be empty');
-    /*one upper, one lower, one selected special character,1 digit,8 character minimun*/
-  } else if (!(parseInt(age.value) < 120)) {
-    errors.push(
-      'age must be numerical,bigger than 18 and smaller than 120 years'
-    );
-  }
-  /*-----------------------------------URL-------------------------------------*/
   verify(
     url.value,
     'URL',
     /^http(s)?:\/\/www\.[a-zA-Z]+\.[a-z]+(\.[a-z]+)?$/,
-    'URL should follow a valid format like: http://www.someting.online.dev https://www.douglascoding.online http://www.douglascoding.com http://www.douglas-coding.com http://www.douglascoding123.com'
+    'URL should follow a valid format like: http://www.xyz.xyz.xyz https://www.xyz.xyz http://www.xyz.xyz http://www.xyz.xyz http://www.xyz.xyz',
+    'errorUrl'
   );
+  verify(
+    phone.value,
+    'Phone',
+    /^\d\d\d\d\d\d\d\d$/,
+    'Phone must have exactly 8 digits',
+    'errorPhone'
+  );
+  verify(age.value, 'Age', /[0-9]/, 'Age must be a digit', 'errorAge');
+  /*-----------------------------------PASSWORD_confirmation --------------------------------------*/
+  let parragraphConfirmation = document.getElementById(
+    'errorPasswordConfirmation'
+  );
+  if (parragraphConfirmation.firstChild) {
+    parragraphConfirmation.removeChild(parragraphConfirmation.firstChild);
+  }
+  if (password_confirmation.value != password.value) {
+    validated = false;
+    let text = document.createTextNode(`Password conformation doesn't match`);
+    parragraphConfirmation.appendChild(text);
+  }
 
-  /*--------------------------Error list---------------------------- */
+  /*--------------------------Validated data---------------------------- */
   const data = {
     userName: userName.value,
     lastName: lastName.value,
@@ -88,8 +94,7 @@ function validate(e) {
     tablet: tablet.checked,
     smartphone: smartphone.checked,
   };
-  if (errors.length === 0) console.log(data);
-  errors_display(errors);
+  if (validated) console.log(data);
 }
 
 form.addEventListener('submit', validate);
