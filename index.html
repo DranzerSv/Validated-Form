@@ -108,70 +108,68 @@
         <p class="error__message" id="errorUrl"></p>
       </div>
 
-      <section class="optional__inputs">
-        <div class="experience__container">
-          <label for="experience">Level of experience</label>
-          <select name="experience" id="experience" class="select__input">
-            <option value="junior">Junior</option>
-            <option value="mid_level" selected>Mid Level</option>
-            <option value="Senior">Senior</option>
-          </select>
-        </div>
+      <label for="experience">Level of experience</label>
+      <select name="experience" id="experience" class="select__input">
+        <option value="junior">Junior</option>
+        <option value="mid_level" selected>Mid Level</option>
+        <option value="Senior">Senior</option>
+      </select>
 
-        <div class="form__selection">
-          <label for="desktop">
-            <p>What kind of device do you use?</p>
-            <input
-              type="checkbox"
-              id="desktop"
-              name="desktop"
-              value="desktop"
-            />Desktop PC
-          </label>
+      <div class="form__salary-container">
+        <label for="salary" class="form__salary-label">Expected salary</label>
 
-          <label for="laptop">
-            <input
-              type="checkbox"
-              id="laptop"
-              name="laptop"
-              value="laptop"
-            />Laptop
-          </label>
+        <input
+          type="range"
+          id="salary"
+          name="salary"
+          min="600"
+          max="2500"
+          class="form__range"
+          step="50"
+          value="1200"
+        />
+        <output name="val" for="salary" class="form__output"></output>
+      </div>
 
-          <label for="tablet">
-            <input
-              type="checkbox"
-              id="tablet"
-              name="tablet"
-              value="tablet"
-            />Tablet
-          </label>
-
-          <label for="smartphone">
-            <input
-              type="checkbox"
-              id="smartphone"
-              name="smartphone"
-              value="smartphone"
-            />Smartphone
-          </label>
-        </div>
-        <div class="form__salary-container">
-          <label for="salary" class="form__salary-label">Expected salary</label>
-
+      <div class="form__selection">
+        <label for="desktop">
+          <p>What kind of device do you use?</p>
           <input
-            type="range"
-            id="salary"
-            name="salary"
-            min="600"
-            max="2500"
-            class="form__range"
-            step="50"
-            value="1200"
-          />
-          <output name="val" for="salary" class="form__output"></output>
-        </div>
-      </section>
+            type="checkbox"
+            id="desktop"
+            name="desktop"
+            value="desktop"
+          />Desktop PC
+        </label>
+
+        <label for="laptop">
+          <input
+            type="checkbox"
+            id="laptop"
+            name="laptop"
+            value="laptop"
+          />Laptop
+        </label>
+
+        <label for="tablet">
+          <input
+            type="checkbox"
+            id="tablet"
+            name="tablet"
+            value="tablet"
+          />Tablet
+        </label>
+
+        <label for="smartphone">
+          <input
+            type="checkbox"
+            id="smartphone"
+            name="smartphone"
+            value="smartphone"
+          />Smartphone
+        </label>
+        <br />
+      </div>
 
       <input type="submit" value="SEND" class="form__submit" />
     </form>
@@ -181,7 +179,7 @@
       class="laser__cat-gif"
       id="laser_cat-gif"
     />
-    <!--THE SQUARE WITH ALL USER WRONG INPUTS----------------->
+    <!--THE SQUARE WITH ALL USER WRONG INPUTS ----------------->
 
     <script type="module" src="./js/app.js"></script>
     <script src="./js/konamiCode.js"></script>

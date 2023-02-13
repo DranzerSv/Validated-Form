@@ -1,22 +1,4 @@
 @media (min-width: 768px) {
-  .errors__list {
-    overflow: hidden;
-    box-sizing: border-box;
-    width: 40vw;
-    margin-left: 30vw;
-    background-color: #ffe7e7;
-    list-style: none;
-    font-family: 'Changa';
-    display: flexbox;
-    flex-direction: column;
-    padding-left: 35px;
-    border-radius: 2.5%;
-  }
-  .errors__list li {
-    color: #ef4243;
-    margin-top: 5px;
-    margin-bottom: 5px;
-  }
   label {
     margin-left: 15px;
     color: #9749e3;
@@ -58,30 +40,24 @@
     width: 200px;
   }
   .error__message {
-    background-color: #ffe7e7;
     width: 200px;
     max-height: 500px;
     margin: 0px;
+    font-family: 'Changa';
   }
 
   .password {
     color: black;
   }
   /*---------------optionals inputs----------------*/
-  .optional__inputs {
-    grid-column: 1/4;
-    display: flex;
-    flex-wrap: wrap;
-  }
+
   /*--------------Devices-------------*/
 
   .form__selection {
+    grid-column: 1/5;
     display: flex;
     flex-direction: column;
-
-    height: 300px;
     width: 300px;
-    background-color: coral;
   }
   input[type='checkbox'] {
     margin-left: 4vw;
@@ -89,9 +65,7 @@
   }
   /*--------------Experience-------------*/
   .experience__container {
-    background-color: cadetblue;
     height: 200px;
-    width: 150px;
   }
   .select__input {
     margin-bottom: 5px;
@@ -108,13 +82,13 @@
     box-sizing: border-box;
   }
   .form__salary-container {
-    background-color: aqua;
     width: 400px;
     display: flex;
     flex-direction: column;
     padding-right: 190px;
     justify-content: center;
     align-items: center;
+    margin-left: 70px;
   }
   .form__salary-label {
     width: 200px;
@@ -149,8 +123,9 @@
     color: #9749e3;
   }
   .form__submit {
+    grid-column: 1/5;
     margin-bottom: 30px;
-    margin-left: auto;
+    margin-left: 30vw;
     width: 40vw;
     max-width: 300px;
     height: 40px;

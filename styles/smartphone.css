@@ -50,7 +50,7 @@ label {
   margin-bottom: 15px;
 }
 .error__message {
-  background-color: #ffe7e7;
+  color: crimson;
   width: 200px;
   margin: 0px;
 }
