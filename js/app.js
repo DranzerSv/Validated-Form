@@ -1,4 +1,3 @@
-import {} from './domElements.js'; /*poner variables */
 function validate(e) {
   let validated = true;
 

@@ -42,8 +42,8 @@
   .error__message {
     width: 200px;
     max-height: 500px;
-    margin: 0px;
     font-family: 'Changa';
+    margin: 0px;
   }
 
   .password {

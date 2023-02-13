@@ -39,7 +39,7 @@ label {
 }
 
 .form__input::placeholder {
-  color: gray;
+  color: rgb(178, 173, 173);
   font-family: 'Changa';
 }
 .input__container {
