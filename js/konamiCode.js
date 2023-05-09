@@ -1,7 +1,7 @@
 let keyLog = [];
 
 window.addEventListener('keyup', (e) => {
-  const gif = document.getElementById('laser_cat-gif');
+  const gif = document.getElementById('cat__gif');
   const secretCode = 'kami';
   const tecla = e.key.toLowerCase();
   keyLog.push(tecla);
