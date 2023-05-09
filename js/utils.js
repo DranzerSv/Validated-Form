@@ -28,7 +28,9 @@ function verifyPasswordConfirmation() {
   if (password_confirmation.value != password.value) {
     let text = document.createTextNode(`Password confirmation doesn't match`);
     parragraphConfirmation.appendChild(text);
+    return false;
   }
+  return true;
 }
 
 export { verify, verifyPasswordConfirmation };
